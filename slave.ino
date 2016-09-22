@@ -1,6 +1,6 @@
 #include <Wire.h>
 
-byte y = 6; //what we send
+
 
 void setup() {
   Wire.begin(8);
@@ -9,22 +9,19 @@ void setup() {
 }
 
 void loop() {
-  delay(100);
+  byte y = random(0,5); //what we send
+  Wire.beginTransmission(9); // transmit to device #8
+  Wire.write(y);              // sends one byte
+  Wire.endTransmission();    // stop transmitting
+  delay(500);
 }
-
 void receiveEvent(int howMany) {
   while (1 < Wire.available()) {
     char c = Wire.read();
     Serial.print(c);
+
   }
   int x = Wire.read();
   Serial.println(x);
-  delay(1000);
-  send();
-}
 
-void send(){
-  Wire.beginTransmission(9); // transmit to device #8
-  Wire.write(y);              // sends one byte
-  Wire.endTransmission();    // stop transmitting
 }
