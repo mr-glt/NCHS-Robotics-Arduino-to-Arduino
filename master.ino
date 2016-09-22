@@ -15,7 +15,7 @@ void loop() {
   Wire.beginTransmission(8); // transmit to device #8
   Wire.write(x);              // sends one byte
   Wire.endTransmission();    // stop transmitting
-  delay(500);
+  delay(5000);
 }
 void receiveEvent(int howMany) {
   while (1 < Wire.available()) {
