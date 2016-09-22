@@ -20,7 +20,7 @@ void loop() {
   Wire.beginTransmission(8); // transmit to device #8
   Wire.write(x);              // sends one byte
   Wire.endTransmission();    // stop transmitting
-  delay(300);
+  delay(3000);
 }
 void receiveEvent(int howMany) {
   while (1 < Wire.available()) {
@@ -38,7 +38,6 @@ void receiveEvent(int howMany) {
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
-    delay(500);
   }
   if (x==1){
     digitalWrite(LED1, HIGH);
@@ -49,7 +48,6 @@ void receiveEvent(int howMany) {
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
-    delay(500);
   }
   if (x==2){
     digitalWrite(LED1, LOW);
@@ -60,7 +58,6 @@ void receiveEvent(int howMany) {
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
-    delay(500);
   }
   if (x==3){
     digitalWrite(LED1, LOW);
@@ -71,7 +68,6 @@ void receiveEvent(int howMany) {
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
-    delay(500);
   }
   if (x==4){
     digitalWrite(LED1, LOW);
@@ -82,7 +78,5 @@ void receiveEvent(int howMany) {
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
-    delay(500);
   }
-  delay(1000);
 }
