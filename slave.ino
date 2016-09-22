@@ -11,10 +11,12 @@ void loop() {
 }
 
 void receiveEvent(int howMany) {
+  /*
   while (1 < Wire.available()) {
     char c = Wire.read();
     Serial.print(c);
   }
+  */
   int x = Wire.read();
   Serial.println("There are " + x + " lights on.");
 }
