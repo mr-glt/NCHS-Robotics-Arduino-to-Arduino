@@ -21,6 +21,6 @@ void receiveEvent(int howMany) {
   }
   */
   int x = Wire.read();
-  Serial.println("There are " + x + " lights on.");
+  Serial.println(x);
   delay(1000);
 }
