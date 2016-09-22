@@ -1,5 +1,7 @@
 #include <Wire.h>
 
+byte x = 0; //what we send
+
 void setup() {
   Wire.begin(8);
   Wire.onReceive(receiveEvent);
@@ -19,4 +21,12 @@ void receiveEvent(int howMany) {
   */
   int x = Wire.read();
   Serial.println("There are " + x + " lights on.");
+  delay(1000);
+  send();
+}
+
+void send(){
+  Wire.beginTransmission(8); // transmit to device #8
+  Wire.write(x);              // sends one byte
+  Wire.endTransmission();    // stop transmitting
 }
