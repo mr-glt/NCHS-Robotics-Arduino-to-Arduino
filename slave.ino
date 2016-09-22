@@ -1,6 +1,6 @@
 #include <Wire.h>
 
-byte x = 0; //what we send
+byte y = 0; //what we send
 
 void setup() {
   Wire.begin(8);
@@ -27,6 +27,6 @@ void receiveEvent(int howMany) {
 
 void send(){
   Wire.beginTransmission(8); // transmit to device #8
-  Wire.write(x);              // sends one byte
+  Wire.write(y);              // sends one byte
   Wire.endTransmission();    // stop transmitting
 }
