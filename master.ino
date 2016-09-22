@@ -8,14 +8,19 @@ void setup() {
   Wire.begin(9);
   Wire.onReceive(receiveEvent);
   Serial.begin(9600);
+  pinMode(LED1, OUTPUT);
+  pinMode(LED2, OUTPUT);
+  pinMode(LED3, OUTPUT);
+  pinMode(LED4, OUTPUT);
 }
 
 void loop() {
   byte x = random(0,5); //what we send
+  Serial.println(x);
   Wire.beginTransmission(8); // transmit to device #8
   Wire.write(x);              // sends one byte
   Wire.endTransmission();    // stop transmitting
-  delay(5000);
+  delay(300);
 }
 void receiveEvent(int howMany) {
   while (1 < Wire.available()) {
@@ -29,7 +34,7 @@ void receiveEvent(int howMany) {
     digitalWrite(LED2, LOW);
     digitalWrite(LED3, LOW);
     digitalWrite(LED4, LOW);
-    byte y = x
+    byte y = x;
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
@@ -40,7 +45,7 @@ void receiveEvent(int howMany) {
     digitalWrite(LED2, LOW);
     digitalWrite(LED3, LOW);
     digitalWrite(LED4, LOW);
-    byte y = x
+    byte y = x;
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
@@ -51,7 +56,7 @@ void receiveEvent(int howMany) {
     digitalWrite(LED2, HIGH);
     digitalWrite(LED3, LOW);
     digitalWrite(LED4, LOW);
-    byte y = x
+    byte y = x;
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
@@ -62,7 +67,7 @@ void receiveEvent(int howMany) {
     digitalWrite(LED2, HIGH);
     digitalWrite(LED3, HIGH);
     digitalWrite(LED4, LOW);
-    byte y = x
+    byte y = x;
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
@@ -73,7 +78,7 @@ void receiveEvent(int howMany) {
     digitalWrite(LED2, HIGH);
     digitalWrite(LED3, HIGH);
     digitalWrite(LED4, HIGH);
-    byte y = x
+    byte y = x;
     Wire.beginTransmission(8); // transmit to device #8
     Wire.write(y);              // sends one byte
     Wire.endTransmission();    // stop transmitting
