@@ -34,23 +34,20 @@ void void loop() {
     digitalWrite(led2, HIGH);
     digitalWrite(led3, LOW);
     digitalWrite(led4, LOW);
-  } else{
-      digitalWrite(led1, LOW);
-      digitalWrite(led2, LOW);
-      digitalWrite(led3, LOW);
-      digitalWrite(led4, LOW);
-    }
+  }
   if (analogRead(A3) >=200){
     digitalWrite(led1, HIGH);
     digitalWrite(led2, HIGH);
     digitalWrite(led3, HIGH);
     digitalWrite(led4, LOW);
-  } else{
-      digitalWrite(led1, HIGH);
-      digitalWrite(led2, HIGH);
-      digitalWrite(led3, HIGH);
-      digitalWrite(led4, HIGH);
-    }
+  }
+  if (analogRead(A4) >=200){
+    digitalWrite(led1, HIGH);
+    digitalWrite(led2, HIGH);
+    digitalWrite(led3, HIGH);
+    digitalWrite(led4, HIGH);
+  }
+
   delay(500);
 
   int x = random (0,5);
