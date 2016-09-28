@@ -16,6 +16,12 @@ void setup() {
   pinMode(A4, INPUT);
 
   x = random (0,5);
+  if (x == 0) {
+    digitalWrite(led1, LOW);
+    digitalWrite(led2, LOW);
+    digitalWrite(led3, LOW);
+    digitalWrite(led4, LOW);
+  }
 }
 
 void void loop() {
