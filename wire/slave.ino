@@ -53,7 +53,7 @@ void void loop() {
     }
   delay(500);
 
-  x = random (0,5);
+  int x = random (0,5);
   if (x == 0) {
     digitalWrite(led1, LOW);
     digitalWrite(led2, LOW);

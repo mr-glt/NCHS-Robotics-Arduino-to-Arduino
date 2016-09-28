@@ -15,7 +15,7 @@ void setup() {
   pinMode(A3, INPUT);
   pinMode(A4, INPUT);
 
-  x = random (0,5);
+int  x = random (0,5);
   if (x == 0) {
     digitalWrite(led1, LOW);
     digitalWrite(led2, LOW);
@@ -48,7 +48,7 @@ void setup() {
   }
 }
 
-void void loop() {
+void loop() {
 
   if (analogRead(A1) >=200){
     digitalWrite(led1, HIGH);
@@ -85,7 +85,7 @@ void void loop() {
     }
   delay(500);
 
-  x = random (0,5);
+  int x = random (0,5);
   if (x == 0) {
     digitalWrite(led1, LOW);
     digitalWrite(led2, LOW);
