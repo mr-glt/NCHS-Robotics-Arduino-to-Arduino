@@ -79,7 +79,7 @@ void loop() {
     digitalWrite(led3, HIGH);
     digitalWrite(led4, HIGH);
   }
-  delay(500);
+  delay(1000);
 
   int x = random (0,5);
   if (x == 0) {
@@ -112,5 +112,5 @@ void loop() {
     digitalWrite(led3, HIGH);
     digitalWrite(led4, HIGH);
   }
-  delay(500);
+  delay(1000);
 }
